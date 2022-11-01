@@ -1,0 +1,81 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: db-service
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root123
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    open-in-view: false
+  sql:
+    init:
+      mode: never
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+logging:
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: auth.log
+  level:
+    org.springframework.web: ERROR
+    org.hibernate: ERROR
+
+
+accessTokenLifeTime: 86400000
+refreshTokenLifeTime: 172800000
+
+tokenSecretKey: thisIsSecretKey
+jwt:
+  access:
+    secret: accessSecret
+  refresh:
+    secret: refreshSecret
+
+
+
+
+
+
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    properties:
+#      mail:
+#        smtp:
+#          starttls:
+#            required: true
+#            enable: true
+#          auth: true
+#          connectiontimeout: 5000
+#          timeout: 5000
+#          writetimeout: 5000
+#
+#    username:
+#    password:

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app-auth-service/app-auth-service.iml" filepath="$PROJECT_DIR$/app-auth-service/app-auth-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-db-service/app-db-service.iml" filepath="$PROJECT_DIR$/app-db-service/app-db-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-gateway-service/app-gateway-service.iml" filepath="$PROJECT_DIR$/app-gateway-service/app-gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud/spring-cloud.iml" filepath="$PROJECT_DIR$/spring-cloud/spring-cloud.iml" />
+    </modules>
+  </component>
+</project>
